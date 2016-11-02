@@ -1,1 +1,18 @@
-<h1>This is a task</h1>
+<div class='row'>
+  <div id="all-tasks">
+    <div class='col-md-5'>
+      <h1>The deeds that need doing:</h1>
+      <% @tasks.each do |task| %>
+      <h3 class=><%= task.title %></h3>
+      <%= link_to 'look a bit closer', single_task_path(id: task.id), remote: true %>
+      <% end %>
+    </div>
+  </div>
+  <div class='col-md-5'>
+    <div class='affix'>
+      <div id="single-task">
+        <h1>HEY</h1>
+      </div>
+    </div>
+  </div>
+</div>
