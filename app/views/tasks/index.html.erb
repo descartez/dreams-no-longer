@@ -2,16 +2,18 @@
   <div id="all-tasks">
     <div class='col-md-5'>
       <h1>The deeds that need doing:</h1>
+      <h3 class=>DO IT</h3>
+      <%= link_to 'SEE IT', do_it_widget_path, remote: true %>
       <% @tasks.each do |task| %>
       <h3 class=><%= task.title %></h3>
-      <%= link_to 'look a bit closer', single_task_path(id: task.id), remote: true %>
+      <%= link_to 'DO IT', single_task_path(id: task.id), remote: true %>
       <% end %>
     </div>
   </div>
   <div class='col-md-5'>
     <div class='affix'>
       <div id="single-task">
-        <h1>HEY</h1>
+        <%= render partial: 'do_it_widget' %>
       </div>
     </div>
   </div>

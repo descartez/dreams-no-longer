@@ -14,4 +14,7 @@ class TasksController < ApplicationController
       format.js
     end
   end
+
+  def do_it_widget
+  end
 end

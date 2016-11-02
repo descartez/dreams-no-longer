@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'fetch_task' => 'tasks#single_task', as: 'single_task'
+  get 'fetch_do_it' => 'tasks#do_it_widget', as: 'do_it_widget'
+
   resources :tasks
 
   # Example of regular route:
