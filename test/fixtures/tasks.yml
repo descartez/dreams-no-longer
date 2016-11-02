@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  task: MyText
+  done: false
+  progress: 1
+
+two:
+  title: MyString
+  task: MyText
+  done: false
+  progress: 1
