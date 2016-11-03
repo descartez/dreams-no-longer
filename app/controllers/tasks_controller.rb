@@ -22,6 +22,12 @@ class TasksController < ApplicationController
     p @task
   end
 
+  def destroy
+    @task = Task.find(params.fetch(:id).to_i)
+    p @task
+    @task.destroy
+  end
+
   def single_task
     @task = Task.find(params[:id])
     respond_to do |format|
