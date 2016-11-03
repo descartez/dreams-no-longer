@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
   def index
-    @tasks = Task.all
+    @tasks = Task.all.reverse
   end
 
   def show
@@ -18,6 +18,7 @@ class TasksController < ApplicationController
   def create
     p post = params.fetch(:post)
     @task = Task.create(title: post.fetch(:title), task: post.fetch(:task))
+    @tasks = Task.all.reverse
     p @task
   end
 
