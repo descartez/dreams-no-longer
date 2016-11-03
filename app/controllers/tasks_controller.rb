@@ -26,6 +26,10 @@ class TasksController < ApplicationController
     @task = Task.find(params.fetch(:id).to_i)
     p @task
     @task.destroy
+    @tasks = Task.all.reverse
+    respond_to do |format|
+      format.js { render :template => 'tasks/destroy.js.erb', :layout => false }
+    end
   end
 
   def single_task
