@@ -1,19 +1,19 @@
 // Place all the styles related to the Task controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$done-bg-color : green;
-
+$finished-task-bg-color : green;
+$task-bg-color: grey;
 
 .tasks {
   padding: 5px;
 }
 
 .task-done {
-  background-color: $done-bg-color;
+  background-color: $finished-task-bg-color;
   color: white;
 }
 
 .task-not-done {
-  background-color: grey;
+  background-color: $task-bg-color;
   color: white;
 }
