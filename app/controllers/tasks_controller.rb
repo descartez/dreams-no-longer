@@ -8,6 +8,19 @@ class TasksController < ApplicationController
     @task = Task.find(params.fetch(:id))
   end
 
+  def new
+    @task = Task.new
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def create
+    p post = params.fetch(:post)
+    @task = Task.create(title: post.fetch(:title), task: post.fetch(:task))
+    p @task
+  end
+
   def single_task
     @task = Task.find(params[:id])
     respond_to do |format|

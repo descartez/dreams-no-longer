@@ -1,0 +1,2 @@
+$('#single-task').html("<%= escape_javascript(render partial: 'created_task', locals: {task: @task}) %>")
+$('#all-tasks').html("<%= escape_javascript(render partial: 'all_tasks', locals: {tasks: @tasks}) %>")

@@ -1,0 +1,11 @@
+<%= form_for @task, as: :post, remote: true do |f| %>
+<div class="form-group">
+  <label for="title">Title</label>
+  <%= f.text_field :title %>
+</div>
+<div class="form-group">
+  <label for="task">Task</label>
+  <%= f.text_field :task %>
+</div>
+<%= f.submit %>
+<% end %>
