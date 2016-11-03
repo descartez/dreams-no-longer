@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'fetch_task' => 'tasks#single_task', as: 'single_task'
   get 'fetch_do_it' => 'tasks#do_it_widget', as: 'do_it_widget'
+  get 'finish_task' => 'tasks#finish_task', as: 'finish_task'
 
   resources :tasks
 

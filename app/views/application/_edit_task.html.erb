@@ -1,0 +1,12 @@
+<h2>Edit Task</h2>
+<%= form_for task, as: :put, remote: true do |f| %>
+<div class="form-group">
+  <label for="title">Title</label>
+  <%= f.text_field :title, value: task.title %>
+</div>
+<div class="form-group">
+  <label for="task">Task</label>
+  <%= f.text_field :task, value: task.task %>
+</div>
+<%= f.submit %>
+<% end %>

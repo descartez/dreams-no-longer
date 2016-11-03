@@ -15,4 +15,22 @@ class Task < ActiveRecord::Base
       return "not-done"
     end
   end
+
+  def finish_unfinish
+    case self.done
+    when true
+      self.unfinish
+    when false
+      self.finish
+    end
+    self.save
+  end
+
+  def finish
+    self.done = true
+  end
+
+  def unfinish
+    self.done = false
+  end
 end
