@@ -3,7 +3,7 @@
 <% tasks.each do |task| %>
 <div class="task-<%= task.return_done_status %> tasks">
 <h3><%= task.title %></h3>
-<div class="btn btn-default"><%= link_to 'DO IT', single_task_path(id: task.id), remote: true %></div>
+<%= link_to 'DO IT', single_task_path(id: task.id), remote: true %>
 </div>
 <% end %>
 <% else %>
