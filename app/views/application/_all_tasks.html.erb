@@ -3,7 +3,7 @@
 <% tasks.each do |task| %>
 <div class="task-<%= task.return_done_status %> tasks">
 <h3><%= task.title %></h3>
-<%= link_to 'DO IT', single_task_path(id: task.id), remote: true %>
+<%= button_to 'DO IT', single_task_path(id: task.id), class: 'btn btn-primary', method: :get, remote: true %>
 </div>
 <% end %>
 <% else %>

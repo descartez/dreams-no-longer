@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $finished-task-text-color : green;
 $task-bg-color: grey;
+$unit: 10px;
+$half-unit: $unit/2;
 
 .tasks {
   padding: 5px;
@@ -14,4 +16,8 @@ $task-bg-color: grey;
 
 .task-not-done {
   color: black;
+}
+
+.btn {
+  margin-right: $half-unit;
 }

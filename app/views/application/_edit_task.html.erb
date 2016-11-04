@@ -6,7 +6,7 @@
 </div>
 <div class="form-group">
   <label for="task">Task</label>
-  <%= f.text_field :task, value: task.task %>
+  <%= f.text_area :task, value: task.task %>
 </div>
-<%= f.submit %>
+<%= f.submit class: "btn btn-primary" %>
 <% end %>

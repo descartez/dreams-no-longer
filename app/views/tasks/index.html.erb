@@ -6,8 +6,10 @@
   </div>
   <div class='col-md-5'>
     <div class='affix'>
-      <%= link_to 'Motivate', do_it_widget_path, remote: true %>
-      <%= link_to 'New Task', new_task_path, remote: true %>
+      <div class="btn-group btn-group-justified">
+      <%= button_to 'Motivate', do_it_widget_path, method: :get,class: 'btn btn-default pull-left', remote: true %>
+      <%= button_to 'New Task', new_task_path, method: :get,class: 'btn btn-default pull-left', remote: true %>
+      </div>
       <div id="single-task">
         <%= render partial: 'do_it_widget' %>
       </div>
