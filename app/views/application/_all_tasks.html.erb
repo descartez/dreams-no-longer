@@ -1,13 +1,12 @@
 <h1>The deeds that need doing:</h1>
 <% if !!tasks %>
-<% tasks.each do |task| %>
-<div class="task-<%= task.return_done_status %> tasks">
-<h3><%= task.title %></h3>
-<%= button_to 'DO IT', single_task_path(id: task.id), class: 'btn btn-primary', method: :get, remote: true %>
-</div>
+  <% tasks.each do |task| %>
+  <div class="task-<%= task.return_done_status %> tasks">
+    <h3><%= task.title %></h3>
+    <%= button_to 'DO IT', single_task_path(id: task.id), class: 'btn btn-primary', method: :get, remote: true %>
+  </div>
+  <% end %>
+<% else tasks.nil? %>
+  <h3>No Tasks Yet</h3>
+  <p>But that will change.</p>
 <% end %>
-<% else %>
-<h3>No Tasks Yet</h3>
-<p>But that will change.</p>
-<% end %>
-
